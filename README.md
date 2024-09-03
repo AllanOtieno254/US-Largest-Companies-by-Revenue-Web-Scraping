@@ -25,10 +25,17 @@ The data scraped includes the following information:
 - **Headquarters**: The location of the company's headquarters.
 - **Employees**: Number of employees in the company.
 
+## 🛠 Technologies Used
+
+- **Python**: The primary programming language used for scraping and data analysis.
+- **BeautifulSoup4**: For parsing HTML and XML documents.
+- **Pandas**: For data manipulation and analysis.
+- **Requests**: For making HTTP requests to retrieve web pages.
+- **Jupyter Notebook**: For data analysis and visualization.
+
 ## 🔧 Installation and Setup
 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/YourUsername/US-Largest-Companies-Web-Scraping.git
    cd US-Largest-Companies-Web-Scraping
-
