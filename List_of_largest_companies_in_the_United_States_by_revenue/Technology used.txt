@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 🛠 Technologies Used
 Python: The primary programming language used for scraping and data analysis.
 BeautifulSoup4: For parsing HTML and XML documents.
 Pandas: For data manipulation and analysis.
 Requests: For making HTTP requests to retrieve web pages.
+=======
+🛠 Technologies Used
+Python: The primary programming language used for scraping and data analysis.
+BeautifulSoup4: For parsing HTML and XML documents.
+Pandas: For data manipulation and analysis.
+Requests: For making HTTP requests to retrieve web pages.
+>>>>>>> ff856d996439913518debe3d42c47ba1f9a7b8e6
 Jupyter Notebook: For data analysis and visualization.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 US-Largest-Companies-Web-Scraping/
 │
 ├── data/                           # Directory to store scraped data
@@ -16,3 +17,23 @@ US-Largest-Companies-Web-Scraping/
 ├── README.md                       # Readme file
 ├── requirements.txt                # Python dependencies
 └── .gitignore                      # Git ignore file
+=======
+US-Largest-Companies-Web-Scraping/
+│
+├── data/                           # Directory to store scraped data
+│   ├── companies.csv               # CSV file with the scraped data
+│
+├── images/                         # Directory for images used in the README
+│   ├── companies_image.jpg
+│
+├── scripts/                        # Directory for Python scripts
+│   ├── web_scraper.py              # Main web scraping script
+│
+├── notebooks/                      # Jupyter notebooks for data analysis
+│   ├── data_analysis.ipynb
+│
+├── LICENSE                         # License for the project
+├── README.md                       # Readme file
+├── requirements.txt                # Python dependencies
+└── .gitignore                      # Git ignore file
+>>>>>>> ff856d996439913518debe3d42c47ba1f9a7b8e6
