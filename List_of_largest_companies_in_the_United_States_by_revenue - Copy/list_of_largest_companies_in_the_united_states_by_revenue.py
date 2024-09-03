@@ -7,14 +7,25 @@ Original file is located at
     https://colab.research.google.com/drive/1mfBBBJfIbIPrEqLeGCecQZJww1r6z2ea
 
 **SCRAPING DATA FROM A REAL WEBSITE + PANDAS**
+
+**Importing Libraries**
 """
 
+# Import BeautifulSoup for parsing HTML and requests for making HTTP requests
 from bs4 import BeautifulSoup
 import requests
 
-url = 'https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_States_by_revenue'
-page = requests.get(url)
+# Import pandas for data manipulation and analysis
+import pandas as pd
 
+"""**Defining the URL**"""
+
+# Define the URL of the Wikipedia page
+url = 'https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_States_by_revenue'
+
+# Send a GET request to the URL to fetch the page content
+page = requests.get(url)
+# Parse the page content using BeautifulSoup with the 'html' parser
 soup = BeautifulSoup(page.text, 'html')
 
 print(soup)
@@ -23,32 +34,57 @@ soup.find('table')
 
 soup.find_all('table')[0]
 
-soup.find_all('table', class_='wikitable sortable')
+# Find all tables with the class 'wikitable sortable' and select the first one
+table = soup.find_all('table', class_='wikitable sortable')[0]
 
-table = soup.find_all('table')[0]
+"""**Finding the Table:**"""
+
+# Find all tables with the class 'wikitable sortable' and select the first one
+table = soup.find_all('table', class_='wikitable sortable')[0]
 
 print(table)
 
 world_titles = table.find_all('th')
 world_titles
 
-world_table_titles = [title.text.strip() for title in world_titles]
-world_table_titles
+"""**Extracting Table Headers**"""
 
-import pandas as pd
-df = pd.DataFrame(columns = world_table_titles)
+# Find all header ('th') elements in the table
+world_titles = table.find_all('th')
+
+# Strip extra spaces and create a list of header names
+world_table_titles = [title.text.strip() for title in world_titles]
+
+"""**Creating the DataFrame**"""
+
+# Create an empty DataFrame with the extracted headers as column names
+df = pd.DataFrame(columns=world_table_titles)
 df
 
 column_data = table.find_all('tr')
 
+"""**Extracting Rows**"""
+
+# Find all row ('tr') elements in the table
+column_data = table.find_all('tr')
+
+# Loop through each row in the table, skipping the first row (headers)
 for row in column_data[1:]:
-  row_data = row.find_all('td')
-  individual_row_data = [data.text.strip() for data in row_data]
-  print(individual_row_data)
-  length = len(df)
-  df.loc[length] = individual_row_data ##we are checking the length of our dataframe each time is looping through
-                                        ##then we gonna put the info in next location
+    # Extract data from each cell ('td') in the row
+    row_data = row.find_all('td')
+
+    # Strip extra spaces and create a list of cell data
+    individual_row_data = [data.text.strip() for data in row_data]
+
+    # Determine the current length of the DataFrame
+    length = len(df)
+
+    # Append the row data to the DataFrame at the next available index
+    df.loc[length] = individual_row_data
 
 df
 
+"""**Saving Data to CSV**"""
+
+# Save the DataFrame to a CSV file at the specified path, without including the index
 df.to_csv(r'D:\ALLANS PROJECTS\webscraping\topcompanies.csv', index=False)
