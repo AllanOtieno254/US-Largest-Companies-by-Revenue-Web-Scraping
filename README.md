@@ -6,7 +6,7 @@ Welcome to the **US Largest Companies Web Scraping Project** repository! This pr
 
 ## 📑 Project Overview
 
-In this project, we have developed a Python-based web scraper that extracts the list of the largest companies in the United States by revenue from [Wikipedia](https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_States_by_revenue). The data is then cleaned, analyzed, and saved in a CSV format for further use.
+In this project, we have developed a Python-based web scraper that extracts the list of the largest companies in the United States by revenue from [Wikipedia](https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_States_by_revenue). The data is then cleaned, analyzed, and saved in a CSV format for further use. 
 
 ### Features:
 - Automated data extraction from Wikipedia.
