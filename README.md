@@ -13,7 +13,7 @@ In this project, we have developed a Python-based web scraper that extracts the 
 - Data cleaning and preprocessing.
 - Saving the cleaned data in CSV format.
 - Basic data analysis and visualization.
-- User-friendly and easy  to understand.
+- User-friendly and easy  to understand. 
 
 ## 📊 Data Description
 
