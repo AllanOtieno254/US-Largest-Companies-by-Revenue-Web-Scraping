@@ -10,7 +10,7 @@ In this project, we have developed a Python-based web scraper that extracts the 
 
 ### Features:
 - Automated data extraction from Wikipedia.
-- Data cleaning and preprocessing.
+- Data cleaning and preprocessing. 
 - Saving the cleaned data in CSV format.
 - Basic data analysis and visualization.
 - User-friendly and easy  to understand. 
